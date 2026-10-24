@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Unsent Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div class="eyebrow">✦ A LITTLE CORNER OF THE INTERNET ✦</div>
+      <h1>the <em>unsent</em> project<span>.</span></h1>
+      <p class="subtitle">for the words that never found their way.</p>
+    </header>
+
+    <section class="composer" aria-labelledby="write-title">
+      <div class="section-heading"><span>01 / LET IT OUT</span><span>♡</span></div>
+      <h2 id="write-title">Dear someone,</h2>
+      <form id="message-form">
+        <label class="sr-only" for="message">Your unsent message</label>
+        <textarea id="message" maxlength="500" required placeholder="there's something I've been meaning to tell you..."></textarea>
+        <div class="form-bottom">
+          <span id="counter">0 / 500</span>
+          <fieldset>
+            <legend>What does it feel like?</legend>
+            <div class="moods">
+              <label><input type="radio" name="mood" value="love" checked /><span>♡ love</span></label>
+              <label><input type="radio" name="mood" value="regret" /><span>☾ regret</span></label>
+              <label><input type="radio" name="mood" value="gratitude" /><span>✧ gratitude</span></label>
+              <label><input type="radio" name="mood" value="missing" /><span>✿ missing you</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <button class="send" type="submit">let it go ↗</button>
+      </form>
+      <p class="privacy">✧ saved only on this device. nothing is actually sent.</p>
+    </section>
+
+    <section class="wall" aria-labelledby="wall-title">
+      <div class="section-heading"><span>02 / THE THINGS WE NEVER SAID</span><span id="total">0 NOTES</span></div>
+      <h2 id="wall-title">a wall of almosts<span>.</span></h2>
+      <div id="messages" class="message-grid" aria-live="polite"></div>
+    </section>
+    <footer>made for the feelings that deserve a place to land ♡</footer>
+  </main>
+</body>
+</html>
